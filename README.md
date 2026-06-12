@@ -12,6 +12,8 @@
 ![Access Scope](https://img.shields.io/badge/Access%20Scope-Authorized%20Retrieval-c9a66b?style=for-the-badge)
 ![Deployable Sandbox](https://img.shields.io/badge/Deployable-Sandbox%20Runner-5f8fa3?style=for-the-badge)
 ![Executive Ready](https://img.shields.io/badge/Executive--Ready-Board%20Readable-c9a66b?style=for-the-badge)
+![Source Registry](https://img.shields.io/badge/Source%20Registry-Authority%20Mapped-62d9ff?style=for-the-badge)
+![Scorecard](https://img.shields.io/badge/RAG%20Scorecard-Pilot%20Assessment-c9a66b?style=for-the-badge)
 
 ### **Govern what an AI system may retrieve, trust, cite, and use before output becomes enterprise consequence.**
 
@@ -19,6 +21,7 @@
 ![Decision](https://img.shields.io/badge/Decision-ADMIT%20%7C%20HOLD%20%7C%20REFUSE%20%7C%20REVALIDATE-1f4f5a?style=flat-square)
 ![Telemetry](https://img.shields.io/badge/Telemetry-Retrieval%20Evidence-5f8fa3?style=flat-square)
 ![Pilot Ready](https://img.shields.io/badge/Pilot--Ready-Source%20Trust%20Review-c9a66b?style=flat-square)
+![Public Safe](https://img.shields.io/badge/Public--Safe-Protected%20Boundary-1f4f5a?style=flat-square)
 
 </div>
 
@@ -36,17 +39,33 @@ The Elyria RAG Source Authority Gate turns retrieval from a hidden implementatio
 
 ---
 
+## Visual / Buyer Experience
+
+| Signal | What It Shows |
+|---|---|
+| **Hero image** | The repository is packaged as a serious enterprise control surface. |
+| **Decision palette** | ADMIT / HOLD / REFUSE / REVALIDATE is visible immediately. |
+| **Source registry** | Buyers can see how source authority becomes an operating artifact. |
+| **Scorecard** | Pilot readiness becomes measurable. |
+| **Sandbox runner** | The repo has executable motion, not only documentation. |
+| **Sample report** | Enterprise stakeholders can see the output shape before adopting it. |
+
+---
+
 ## Repository Navigation
 
 | Area | Start Here | Outcome |
 |---|---|---|
 | Executive overview | `README.md` | Understand the retrieval-trust problem and business value. |
+| Visual system | `docs/design-language.md` and `docs/visual-index.md` | Review the repository palette, decision signals, and buyer scan path. |
 | Source authority | `docs/source-authority-model.md` | Determine whether a source is approved, owned, and valid. |
 | Access and sensitivity | `docs/access-scope-and-sensitivity.md` | Resolve identity, access, data classification, and sensitivity controls. |
 | Freshness lifecycle | `docs/freshness-and-lifecycle-model.md` | Check whether source content is current enough for operational use. |
 | Grounding readiness | `docs/grounding-readiness-model.md` | Determine whether output can be traced to approved sources. |
 | Retrieval evidence | `docs/retrieval-telemetry-and-auditability.md` | Define what must be logged to prove governed retrieval. |
 | Pilot sandbox | `docs/deployable-sandbox.md` and `sandbox/runner.py` | Execute example scenarios locally. |
+| Source registry | `docs/source-registry-template.md` | Turn source authority into a reusable operating artifact. |
+| RAG scorecard | `docs/rag-evaluation-scorecard.md` | Score pilot and production readiness. |
 | Sample output | `reports/sample-rag-source-authority-report.md` | Review an enterprise-style readiness report. |
 
 ---
@@ -106,6 +125,9 @@ Enterprise teams gain a repeatable way to convert RAG risk into operational arch
 - citation and evidence expectations
 - retrieval telemetry requirements
 - production readiness checklist
+- source registry template
+- RAG evaluation scorecard
+- sample readiness report
 - revalidation after source, corpus, permission, prompt, model, policy, or environment change
 
 The business value is direct: safer RAG deployment, stronger source trust, reduced hallucination exposure, clearer data governance, stronger auditability, and faster production-readiness review.
@@ -171,8 +193,11 @@ Monitoring, drift, and revalidation
 | Telemetry | What evidence proves what was retrieved and why? | `docs/retrieval-telemetry-and-auditability.md` |
 | Production readiness | What must be resolved before pilot or production movement? | `docs/production-readiness-checklist.md` |
 | Deployable sandbox | How can sample scenarios be executed locally? | `docs/deployable-sandbox.md` and `sandbox/runner.py` |
+| Source registry | How are approved sources recorded and governed? | `docs/source-registry-template.md` |
+| RAG scorecard | How is RAG source readiness scored? | `docs/rag-evaluation-scorecard.md` |
 | Sample report | What does an enterprise-ready RAG review output look like? | `reports/sample-rag-source-authority-report.md` |
 | Architecture diagram | How does the source gate move from intake to decision? | `docs/architecture-diagram.md` |
+| Visual system | How does the repository present as a premium enterprise asset? | `docs/design-language.md` and `docs/visual-index.md` |
 
 ---
 
@@ -183,6 +208,7 @@ Monitoring, drift, and revalidation
 | `src/elyria_rag_source_gate/engine.py` | Public-safe decision engine for ADMIT / HOLD / REFUSE / REVALIDATE. |
 | `src/elyria_rag_source_gate/schema.py` | Scenario schema helpers and decision constants. |
 | `sandbox/runner.py` | Local sandbox runner for example RAG source scenarios. |
+| `sandbox/outputs/sample-sandbox-results.json` | Pre-generated sample output for buyer review. |
 | `docs/source-authority-model.md` | Core model for approved, owned, authorized sources. |
 | `docs/access-scope-and-sensitivity.md` | Access, identity, and sensitive data boundary model. |
 | `docs/freshness-and-lifecycle-model.md` | Source freshness, lifecycle, and expiration model. |
@@ -192,9 +218,16 @@ Monitoring, drift, and revalidation
 | `docs/deployable-sandbox.md` | Sandbox runbook and pilot usage documentation. |
 | `docs/deployment-modes.md` | Local, workshop, pilot, enterprise, and production adaptation modes. |
 | `docs/architecture-diagram.md` | Mermaid architecture diagram. |
+| `docs/design-language.md` | Visual identity, palette, badge system, voice, and public-boundary rules. |
+| `docs/visual-index.md` | Executive scan path and visual decision system. |
+| `docs/executive-demo-script.md` | 10-minute buyer or hiring-panel demo path. |
+| `docs/source-registry-template.md` | Buyer-facing source registry operating artifact. |
+| `docs/rag-evaluation-scorecard.md` | Pilot and production-readiness scorecard. |
 | `examples/*.json` | Public-safe RAG source authority scenarios. |
 | `reports/sample-rag-source-authority-report.md` | Example enterprise readiness report. |
 | `tests/expected-rag-source-outcomes.md` | Public-safe expected outcomes. |
+| `SECURITY.md` | Public-safe security policy. |
+| `CONTRIBUTING.md` | Public-safe contribution rules. |
 | `NOTICE.md` | Public-safe boundary and attribution notice. |
 
 ---
