@@ -1,0 +1,14 @@
+[project]
+name = "elyria-rag-source-authority-gate"
+version = "0.1.0"
+description = "Public-safe enterprise RAG source authority sandbox for ADMIT / HOLD / REFUSE / REVALIDATE decisions."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+  { name = "Samantha Revita" }
+]
+license = { text = "MIT" }
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
