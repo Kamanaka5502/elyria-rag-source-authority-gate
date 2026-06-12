@@ -1,0 +1,19 @@
+{
+  "scenario": "Changed Corpus Revalidation",
+  "stage": "production",
+  "source_type": "knowledge_base",
+  "source_approved": true,
+  "source_owner": "Knowledge Operations",
+  "business_owner": "Customer Operations",
+  "technical_owner": "AI Platform Team",
+  "access_authorized": true,
+  "data_classification": "internal",
+  "sensitive_data": false,
+  "sensitivity_controls": true,
+  "freshness_status": "current",
+  "grounding_evaluation": true,
+  "telemetry_required": true,
+  "telemetry_present": true,
+  "revalidation_required": true,
+  "expected_outcome": "REVALIDATE"
+}
