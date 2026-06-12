@@ -4,7 +4,7 @@
 
 ## RAG Governance · Source Authority · Grounding Readiness · Retrieval Control
 
-<img src="assets/rag-source-authority-gate.jpg" alt="Elyria RAG Source Authority Gate" width="100%">
+<img src="rag-source-authority-gate.jpg" alt="Elyria RAG Source Authority Gate" width="100%">
 
 ![License](https://img.shields.io/badge/license-MIT-1f4f5a?style=for-the-badge)
 ![RAG Governance](https://img.shields.io/badge/RAG%20Governance-Source%20Authority-1f4f5a?style=for-the-badge)
