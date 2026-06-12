@@ -1,0 +1,19 @@
+{
+  "scenario": "Unauthorized Sensitive Source",
+  "stage": "production_candidate",
+  "source_type": "support_ticket_history",
+  "source_approved": false,
+  "source_owner": "Customer Support",
+  "business_owner": "Customer Operations",
+  "technical_owner": "AI Platform Team",
+  "access_authorized": false,
+  "data_classification": "confidential",
+  "sensitive_data": true,
+  "sensitivity_controls": false,
+  "freshness_status": "current",
+  "grounding_evaluation": true,
+  "telemetry_required": true,
+  "telemetry_present": true,
+  "revalidation_required": false,
+  "expected_outcome": "REFUSE"
+}
