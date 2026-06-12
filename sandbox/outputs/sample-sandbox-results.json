@@ -1,0 +1,34 @@
+[
+  {
+    "file": "approved-policy-source.json",
+    "scenario": "Approved Policy Source",
+    "expected": "ADMIT",
+    "actual": "ADMIT",
+    "reasons": ["SOURCE_AUTHORITY_RESOLVED"],
+    "remediation": []
+  },
+  {
+    "file": "stale-unknown-owner-source.json",
+    "scenario": "Stale Source With Unknown Owner",
+    "expected": "HOLD",
+    "actual": "HOLD",
+    "reasons": ["MISSING_SOURCE_OWNER", "FRESHNESS_NOT_VALIDATED"],
+    "remediation": ["Assign a source owner.", "Validate source freshness and lifecycle status."]
+  },
+  {
+    "file": "unauthorized-sensitive-source.json",
+    "scenario": "Unauthorized Sensitive Source",
+    "expected": "REFUSE",
+    "actual": "REFUSE",
+    "reasons": ["SOURCE_NOT_APPROVED", "ACCESS_NOT_AUTHORIZED", "SENSITIVE_DATA_CONTROLS_MISSING"],
+    "remediation": ["Approve source before retrieval is allowed.", "Resolve identity and access scope before retrieval.", "Implement sensitivity controls before retrieval."]
+  },
+  {
+    "file": "changed-corpus-revalidation.json",
+    "scenario": "Changed Corpus Revalidation",
+    "expected": "REVALIDATE",
+    "actual": "REVALIDATE",
+    "reasons": ["REVALIDATION_REQUIRED"],
+    "remediation": ["Re-run source authority review before retrieval proceeds."]
+  }
+]
