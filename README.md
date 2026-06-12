@@ -9,14 +9,43 @@
 ![Grounding](https://img.shields.io/badge/Grounding-Readiness%20Gate-2f6f73?style=for-the-badge)
 ![Access Scope](https://img.shields.io/badge/Access%20Scope-Authorized%20Retrieval-c9a66b?style=for-the-badge)
 ![Deployable Sandbox](https://img.shields.io/badge/Deployable-Sandbox%20Runner-5f8fa3?style=for-the-badge)
+![Executive Ready](https://img.shields.io/badge/Executive--Ready-Board%20Readable-c9a66b?style=for-the-badge)
 
 ### **Govern what an AI system may retrieve, trust, cite, and use before output becomes enterprise consequence.**
 
 ![Sources](https://img.shields.io/badge/Sources-Approved%20%7C%20Owned%20%7C%20Fresh-2f6f73?style=flat-square)
 ![Decision](https://img.shields.io/badge/Decision-ADMIT%20%7C%20HOLD%20%7C%20REFUSE%20%7C%20REVALIDATE-1f4f5a?style=flat-square)
 ![Telemetry](https://img.shields.io/badge/Telemetry-Retrieval%20Evidence-5f8fa3?style=flat-square)
+![Pilot Ready](https://img.shields.io/badge/Pilot--Ready-Source%20Trust%20Review-c9a66b?style=flat-square)
 
 </div>
+
+---
+
+## Executive Signal
+
+```text
+RAG retrieval is not source authority.
+```
+
+A system may be technically able to retrieve a document while still being unauthorized to use it for enterprise output.
+
+The Elyria RAG Source Authority Gate turns retrieval from a hidden implementation detail into an explicit enterprise governance boundary.
+
+---
+
+## Repository Navigation
+
+| Area | Start Here | Outcome |
+|---|---|---|
+| Executive overview | `README.md` | Understand the retrieval-trust problem and business value. |
+| Source authority | `docs/source-authority-model.md` | Determine whether a source is approved, owned, and valid. |
+| Access and sensitivity | `docs/access-scope-and-sensitivity.md` | Resolve identity, access, data classification, and sensitivity controls. |
+| Freshness lifecycle | `docs/freshness-and-lifecycle-model.md` | Check whether source content is current enough for operational use. |
+| Grounding readiness | `docs/grounding-readiness-model.md` | Determine whether output can be traced to approved sources. |
+| Retrieval evidence | `docs/retrieval-telemetry-and-auditability.md` | Define what must be logged to prove governed retrieval. |
+| Pilot sandbox | `docs/deployable-sandbox.md` and `sandbox/runner.py` | Execute example scenarios locally. |
+| Sample output | `reports/sample-rag-source-authority-report.md` | Review an enterprise-style readiness report. |
 
 ---
 
@@ -25,7 +54,7 @@
 Run the public-safe sandbox from the repository root:
 
 ```bash
-python sandbox/run_sandbox.py
+python sandbox/runner.py
 ```
 
 The sandbox evaluates every RAG source scenario in:
@@ -118,6 +147,17 @@ Monitoring, drift, and revalidation
 
 ---
 
+## Decision Signal Palette
+
+| Signal | Meaning | Enterprise Use |
+|---|---|---|
+| **ADMIT** | Source authority is resolved. | Retrieval can support the approved use case. |
+| **HOLD** | Evidence is incomplete. | Ownership, freshness, grounding, or telemetry must be completed. |
+| **REFUSE** | Source or access boundary is missing. | Retrieval must not proceed. |
+| **REVALIDATE** | Prior approval is stale. | Source, corpus, permission, prompt, model, or policy changed. |
+
+---
+
 ## End-to-End Coverage
 
 | Layer | Enterprise Question | Repository Asset |
@@ -128,8 +168,9 @@ Monitoring, drift, and revalidation
 | Grounding | Can output be traced to approved sources? | `docs/grounding-readiness-model.md` |
 | Telemetry | What evidence proves what was retrieved and why? | `docs/retrieval-telemetry-and-auditability.md` |
 | Production readiness | What must be resolved before pilot or production movement? | `docs/production-readiness-checklist.md` |
-| Deployable sandbox | How can sample scenarios be executed locally? | `docs/deployable-sandbox.md` and `sandbox/run_sandbox.py` |
+| Deployable sandbox | How can sample scenarios be executed locally? | `docs/deployable-sandbox.md` and `sandbox/runner.py` |
 | Sample report | What does an enterprise-ready RAG review output look like? | `reports/sample-rag-source-authority-report.md` |
+| Architecture diagram | How does the source gate move from intake to decision? | `docs/architecture-diagram.md` |
 
 ---
 
@@ -139,13 +180,14 @@ Monitoring, drift, and revalidation
 |---|---|
 | `src/elyria_rag_source_gate/engine.py` | Public-safe decision engine for ADMIT / HOLD / REFUSE / REVALIDATE. |
 | `src/elyria_rag_source_gate/schema.py` | Scenario schema helpers and decision constants. |
-| `sandbox/run_sandbox.py` | Local sandbox runner for example RAG source scenarios. |
+| `sandbox/runner.py` | Local sandbox runner for example RAG source scenarios. |
 | `docs/source-authority-model.md` | Core model for approved, owned, authorized sources. |
 | `docs/access-scope-and-sensitivity.md` | Access, identity, and sensitive data boundary model. |
 | `docs/freshness-and-lifecycle-model.md` | Source freshness, lifecycle, and expiration model. |
 | `docs/grounding-readiness-model.md` | Grounding, citation, and retrieval confidence model. |
 | `docs/retrieval-telemetry-and-auditability.md` | Evidence requirements for retrieval and output support. |
 | `docs/production-readiness-checklist.md` | Enterprise deployment readiness checklist. |
+| `docs/deployable-sandbox.md` | Sandbox runbook and pilot usage documentation. |
 | `docs/deployment-modes.md` | Local, workshop, pilot, enterprise, and production adaptation modes. |
 | `docs/architecture-diagram.md` | Mermaid architecture diagram. |
 | `examples/*.json` | Public-safe RAG source authority scenarios. |
